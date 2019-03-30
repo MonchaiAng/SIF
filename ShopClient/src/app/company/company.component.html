@@ -1,0 +1,50 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <img id="sanrio" class="img-responsive" src="assets/Images/sanrio.png">
+  <div class="row">
+    <button id="logout" type="button" class="btn btn-success btn-responsive" routerLink="/"
+      (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+
+    <form id="zone" style="margin-top:5em;">
+      <select name="zone">
+        <option disabled>ภาค</option>
+        <option value="north">เหนือ</option>
+        <option value="south">ใต้</option>
+        <option value="east">ตะวันออก</option>
+        <option value="west">ตะวันตก</option>
+      </select>
+    </form>
+    <form id="province" style="margin-top:5em;">
+      <select name="province">
+        <option disabled>จังหวัด</option>
+        <option value="north">กรุงเทพมหานคร</option>
+        <option value="south">นครปฐม</option>
+        <option value="east">ปทุมธานี</option>
+      </select>
+    </form>
+    <form id="department" style="margin-top:5em;">
+      <select name="department">
+        <option disabled>หน่วยงานที่ดูแล</option>
+        <option value="north">สมาคมรวมใจมุ่งพัฒนาอาชีพเพื่อคนตาบอดในประเทศไทย</option>
+        <option value="south">โรงเรียนโสตศึกษาจังหวัดนครปฐม</option>
+        <option value="east">มูลนิธิบ้านครูบุญชูเพื่อเด็กพิเศษ</option>
+        <option value="west">สมาคมรวมใจมุ่งพัฒนาอาชีพเพื่อคนตาบอดในประเทศไทย</option>
+      </select>
+    </form>
+
+  </div>
+
+
+
+
+</div>
+
+<footer class="py-3 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+  </div>
+</footer>

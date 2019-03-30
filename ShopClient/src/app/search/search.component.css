@@ -1,0 +1,94 @@
+#sanrio {
+    width: 9em;
+    height: auto;
+}
+
+#logout {
+    margin-right:1em;
+}
+
+@media only screen and (max-width: 800px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 0;
+		left: 6px;
+		width: 80%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	td:nth-of-type(1):before { content: "Product ID"; }
+	td:nth-of-type(2):before { content: "Product Name"; }
+	td:nth-of-type(3):before { content: "Image"; }
+	td:nth-of-type(4):before { content: "Cartoon"; }
+	td:nth-of-type(5):before { content: "Type"; }
+	td:nth-of-type(6):before { content: "Size"; }
+	td:nth-of-type(7):before { content: "Color"; }
+	td:nth-of-type(8):before { content: "Stock"; }
+	td:nth-of-type(9):before { content: "Price Per Unit"; }
+	td:nth-of-type(10):before { content: "Date In"; }
+}
+
+.table {
+    margin-top:2em;
+    margin-bottom: 2em;
+}
+
+#image {
+	width:20%;
+}
+
+.tbody {
+	text-align: left;
+}
+
+#backtohome {
+	margin-right:0.5em;
+	background-color: palevioletred;
+	color: white;
+	border: none;
+}
+
+#search {
+	margin-top:-0.25em;
+	width: 7em;
+	height: 2em;
+}
+
+#myInput {
+	font-size: 18px;
+	width: 40%;
+	margin-top:6em;
+}
+
+#myInput2 {
+	font-size: 18px;
+	width: 30%;
+	margin-top:6em;
+	margin-left: 1em;
+}

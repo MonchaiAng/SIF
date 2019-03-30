@@ -1,0 +1,146 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <img id="sanrio" class="img-responsive" src="assets/Images/sanrio.png">
+  <div class="row">
+    <button id="backtohome" type="button" class="btn btn-primary btn-responsive" routerLink="/home">Back to Home</button>
+    <button id="logout" type="button" class="btn btn-success btn-responsive" routerLink="/" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <input class="responsive" type="text" id="myInput" onkeyup="myFunction()" placeholder="Name Cartoon and Type Products" title="Type in a name">
+    <input class="responsive" type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Color Products" title="Type in a name">
+    <table role="table" class="table table-striped" id="myTable">
+      <thead role="rowgroup">
+        <tr role="row" style="text-align:center;">
+          <th role="columnheader" id="id">ID</th>
+          <th role="columnheader" id="name">Product Name</th>
+          <th role="columnheader" id="image">Image</th>
+          <th role="columnheader" id="Cartoon">Cartoon</th>
+          <th role="columnheader" id="type">Type</th>
+          <th role="columnheader" id="size">Size</th>
+          <th role="columnheader" id="color">Color</th>
+          <th role="columnheader" id="stock">Stock</th>
+          <th role="columnheader" id="price">Price</th>
+          <th role="columnheader" id="datein">Date In</th>
+        </tr>
+      </thead>
+      <tbody role="rowgroup" class="tbody"> 
+        <tr *ngFor='let i of getStock' style="text-align:center;">
+          <td role="cell">{{i.id}}</td>
+          <td id="productName0" role="cell">{{i.name}}</td>
+          <td id="img" role="cell"><img src="{{i.dataURL}}" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">{{i.cartoon}}</td>
+          <td id="productType0" role="cell">{{i.type}}</td>
+          <td id="productSize0" role="cell">{{i.size}}</td>
+          <td id="productColor0" role="cell">{{i.color}}</td>
+          <td id="productStock0" role="cell">{{i.stock}}</td>
+          <td id="productPrice0" role="cell">{{i.price}}</td>
+          <td id="dateIn0" role="cell">{{i.date}}</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">2</td>
+          <td id="productName0" role="cell">GudetamaBackpack</td>
+          <td id="img" role="cell"><img src="assets/Backpack/GudetamaBackpack.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Gudetama</td>
+          <td id="productType0" role="cell">Backpack</td>
+          <td id="productSize0" role="cell">Medium</td>
+          <td id="productColor0" role="cell">Yellow</td>
+          <td id="productStock0" role="cell">2</td>
+          <td id="productPrice0" role="cell">299</td>
+          <td id="dateIn0" role="cell">20-01-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">3</td>
+          <td id="productName0" role="cell">HelloKittyBackpack</td>
+          <td id="img" role="cell"><img src="assets/Backpack/HelloKittyBackpack.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Hello Kitty</td>
+          <td id="productType0" role="cell">Backpack</td>
+          <td id="productSize0" role="cell">Medium</td>
+          <td id="productColor0" role="cell">Red & White</td>
+          <td id="productStock0" role="cell">5</td>
+          <td id="productPrice0" role="cell">299</td>
+          <td id="dateIn0" role="cell">20-02-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">4</td>
+          <td id="productName0" role="cell">KeroppiBackpack</td>
+          <td id="img" role="cell"><img src="assets/Backpack/KeroppiBackpack.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Keroppi</td>
+          <td id="productType0" role="cell">Backpack</td>
+          <td id="productSize0" role="cell">Medium</td>
+          <td id="productColor0" role="cell">Green</td>
+          <td id="productStock0" role="cell">2</td>
+          <td id="productPrice0" role="cell">299</td>
+          <td id="dateIn0" role="cell">20-03-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">5</td>
+          <td id="productName0" role="cell">CinnamrollCap</td>
+          <td id="img" role="cell"><img src="assets/Cap/CinnamrollCap.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Cinnamroll</td>
+          <td id="productType0" role="cell">Cap</td>
+          <td id="productSize0" role="cell">Normal</td>
+          <td id="productColor0" role="cell">Light Blue</td>
+          <td id="productStock0" role="cell">1</td>
+          <td id="productPrice0" role="cell">150</td>
+          <td id="dateIn0" role="cell">15-02-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">6</td>
+          <td id="productName0" role="cell">HelloKittyCap</td>
+          <td id="img" role="cell"><img src="assets/Cap/HelloKittyCap.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Hello Kitty</td>
+          <td id="productType0" role="cell">Cap</td>
+          <td id="productSize0" role="cell">Normal</td>
+          <td id="productColor0" role="cell">Black</td>
+          <td id="productStock0" role="cell">6</td>
+          <td id="productPrice0" role="cell">150</td>
+          <td id="dateIn0" role="cell">15-04-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">7</td>
+          <td id="productName0" role="cell">AggretsukoCarryBag</td>
+          <td id="img" role="cell"><img src="assets/CarryBag/AggretsukoCarryBag.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Aggretsuko</td>
+          <td id="productType0" role="cell">CarryBag</td>
+          <td id="productSize0" role="cell">Small</td>
+          <td id="productColor0" role="cell">Yellow</td>
+          <td id="productStock0" role="cell">7</td>
+          <td id="productPrice0" role="cell">130</td>
+          <td id="dateIn0" role="cell">20-01-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">8</td>
+          <td id="productName0" role="cell">KuromiCarryBag</td>
+          <td id="img" role="cell"><img src="assets/CarryBag/KuromiCarryBag.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Kuromi</td>
+          <td id="productType0" role="cell">CarryBag</td>
+          <td id="productSize0" role="cell">Medium</td>
+          <td id="productColor0" role="cell">Black & Purple</td>
+          <td id="productStock0" role="cell">2</td>
+          <td id="productPrice0" role="cell">180</td>
+          <td id="dateIn0" role="cell">20-01-2018</td>
+        </tr>
+        <tr style="text-align:center;">
+          <td role="cell">9</td>
+          <td id="productName0" role="cell">PochaccoCarryBag</td>
+          <td id="img" role="cell"><img src="assets/CarryBag/PochaccoCarryBag.jpg" style="width:50%;margin-right:auto;margin-left:auto;display:block;"></td>
+          <td id="productCartoon0" role="cell">Pochacco</td>
+          <td id="productType0" role="cell">CarryBag</td>
+          <td id="productSize0" role="cell">Medium</td>
+          <td id="productColor0" role="cell">Light Blue</td>
+          <td id="productStock0" role="cell">1</td>
+          <td id="productPrice0" role="cell">180</td>
+          <td id="dateIn0" role="cell">20-01-2018</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer class="py-3 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+  </div>
+</footer>

@@ -43,7 +43,7 @@ export class UserloginComponent implements OnInit {
           sessionid: this.sessionid
         }, '/checkType').subscribe(res => {
           if (res[0].TypeUser=="company") {
-            $(location).attr('href', ui_url + '/home');
+            $(location).attr('href', ui_url + '/company');
           }
           else if(res[0].TypeUser=="department") {
             $(location).attr('href', ui_url + '/department');
